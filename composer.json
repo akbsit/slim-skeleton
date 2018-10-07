@@ -1,0 +1,17 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app",
+            "Skeleton\\": "src"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.11",
+        "slim/twig-view": "^2.4",
+        "slim/csrf": "^0.8.3",
+        "illuminate/validation": "^5.7"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.1"
+    }
+}
