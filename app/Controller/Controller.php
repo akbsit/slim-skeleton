@@ -2,15 +2,15 @@
 /**
  * Appointment: Базовый контроллер
  * File: Controller.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
-namespace App\Controllers;
+namespace App\Controller;
 
 /**
  * Class Controller
- * @package App\Controllers
+ * @package App\Controller
  */
 class Controller
 {

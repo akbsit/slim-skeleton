@@ -2,7 +2,7 @@
 /**
  * Appointment: Сборка приложения
  * File: app.php
- * Version: 0.0.1
+ * Version: 0.0.3
  * Author: Anton Kuleshov
  **/
 
@@ -11,7 +11,9 @@ use \Skeleton\Folder;
 
 session_start();
 
-include_once(__DIR__ . '/../vendor/autoload.php');
+if (!include_once(__DIR__ . '/../vendor/autoload.php')) {
+    exit('Composer autoload not found...');
+}
 
 Env::setLocalPath(__DIR__ . '/../.env.local');
 Env::setProductionPath(__DIR__ . '/../.env.production');
@@ -68,6 +70,10 @@ $oContainer['view'] = function ($oContainer) {
 
 if (!include_once(__DIR__ . '/../bootstrap/controllers.php')) {
     exit('Not find container controllers...');
+}
+
+if (!include_once(__DIR__ . '/../bootstrap/middlewares.php')) {
+    exit('Not find container middlewares...');
 }
 
 if (!include_once(__DIR__ . '/../routes.php')) {
