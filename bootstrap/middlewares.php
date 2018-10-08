@@ -2,8 +2,8 @@
 /**
  * Appointment: Добавление посредников в контейнер
  * File: middlewares.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
-$oApp->add(new \App\Middleware\IndexMiddleware($oContainer));
+$oApp->add(new \App\Middleware\CsrfGuardMiddleware($oContainer));

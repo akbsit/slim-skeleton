@@ -2,7 +2,7 @@
 /**
  * Appointment: Базовый посредник
  * File: Middleware.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
@@ -26,5 +26,18 @@ class Middleware
     public function __construct($oContainer)
     {
         return $this->oContainer = $oContainer;
+    }
+
+    /**
+     * @param $sProperty
+     * @return mixed
+     */
+    public function __get($sProperty)
+    {
+        if ($this->oContainer->{$sProperty}) {
+            return $this->oContainer->{$sProperty};
+        }
+
+        return false;
     }
 }

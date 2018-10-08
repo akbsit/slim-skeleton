@@ -2,7 +2,7 @@
 /**
  * Appointment: Сборка приложения
  * File: app.php
- * Version: 0.0.3
+ * Version: 0.0.5
  * Author: Anton Kuleshov
  **/
 
@@ -67,6 +67,12 @@ $oContainer['view'] = function ($oContainer) {
 
     return $oView;
 };
+
+$oContainer['csrf'] = function () {
+    return new \Slim\Csrf\Guard;
+};
+
+$oApp->add($oContainer->csrf);
 
 if (!include_once(__DIR__ . '/../bootstrap/controllers.php')) {
     exit('Not find container controllers...');
