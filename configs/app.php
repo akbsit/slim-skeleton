@@ -2,13 +2,13 @@
 /**
  * Appointment: Настройки приложения
  * File: app.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
 return [
-    'APP_NAME' => $arEnvConfigs['APP_NAME'],
-    'APP_CHARSET' => $arEnvConfigs['APP_CHARSET'],
-    'APP_LOCAL' => $arEnvConfigs['APP_LOCAL'],
-    'APP_DEBUG' => $arEnvConfigs['APP_DEBUG']
+    'NAME' => $arEnvConfigs['APP_NAME'],
+    'CHARSET' => $arEnvConfigs['APP_CHARSET'],
+    'LOCAL' => $arEnvConfigs['APP_LOCAL'],
+    'DEBUG' => $arEnvConfigs['APP_DEBUG']
 ];

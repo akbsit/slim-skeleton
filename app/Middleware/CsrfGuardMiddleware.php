@@ -2,7 +2,7 @@
 /**
  * Appointment: Посредник csrf
  * File: CsrfGuardMiddleware.php
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Anton Kuleshov
  **/
 
@@ -15,12 +15,12 @@ namespace App\Middleware;
 class CsrfGuardMiddleware extends Middleware
 {
     /**
-     * @param $request
-     * @param $response
-     * @param $next
+     * @param $oRequest
+     * @param $oResponse
+     * @param $oNext
      * @return mixed
      */
-    public function __invoke($request, $response, $next)
+    public function __invoke($oRequest, $oResponse, $oNext)
     {
         $this->view->getEnvironment()->addGlobal('csrf', [
             'field' => '
@@ -29,6 +29,6 @@ class CsrfGuardMiddleware extends Middleware
             '
         ]);
 
-        return $next($request, $response);
+        return $oNext($oRequest, $oResponse);
     }
 }

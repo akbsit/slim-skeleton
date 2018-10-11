@@ -2,7 +2,7 @@
 /**
  * Appointment: Главная страница
  * File: IndexController.php
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Anton Kuleshov
  **/
 
@@ -22,9 +22,9 @@ class IndexController extends Controller
     public function index($oRequest, $oResponse)
     {
         return $this->view->render($oResponse, 'index.twig', [
-            'name' => $this->config->APP_NAME,
-            'charset' => $this->config->APP_CHARSET,
-            'local' => $this->config->APP_LOCAL
+            'name' => $this->config->APP['NAME'],
+            'charset' => $this->config->APP['CHARSET'],
+            'local' => $this->config->APP['LOCAL']
         ]);
     }
 }

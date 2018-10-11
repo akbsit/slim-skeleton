@@ -2,7 +2,7 @@
 /**
  * Appointment: Сборка приложения
  * File: app.php
- * Version: 0.0.5
+ * Version: 0.0.7
  * Author: Anton Kuleshov
  **/
 
@@ -33,10 +33,7 @@ $arAppConfigsList = Folder::scan(__DIR__ . '/../configs', 'files');
 $arAppConfigs = [];
 
 foreach ($arAppConfigsList as $sAppConfig) {
-    $arAppConfigs = array_merge(
-        $arAppConfigs,
-        include_once(__DIR__ . '/../configs/' . $sAppConfig)
-    );
+    $arAppConfigs[strtoupper(explode('.', $sAppConfig)[0])] = include_once(__DIR__ . '/../configs/' . $sAppConfig);
 }
 
 $oConfigApp = (object)$arAppConfigs;
@@ -45,11 +42,11 @@ if (!(array)$oConfigApp) {
     exit('No configs files found...');
 }
 
-error_reporting($oConfigApp->APP_DEBUG ? E_ALL : 0);
+error_reporting($oConfigApp->APP['DEBUG'] ? E_ALL : 0);
 
 $oApp = new \Slim\App([
     'settings' => [
-        'displayErrorDetails' => $oConfigApp->APP_DEBUG
+        'displayErrorDetails' => $oConfigApp->APP['DEBUG']
     ]
 ]);
 
@@ -66,6 +63,10 @@ $oContainer['view'] = function ($oContainer) {
     ));
 
     return $oView;
+};
+
+$oContainer['validator'] = function ($oContainer) {
+    return new \App\Validation\Validator($oContainer);
 };
 
 $oContainer['csrf'] = function () {
