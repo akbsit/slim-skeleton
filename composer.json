@@ -9,6 +9,7 @@
         "application template"
     ],
     "homepage": "http://falbar.ru/",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "App\\": "app",
