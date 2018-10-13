@@ -9,10 +9,10 @@
 * [slim/csrf](https://packagist.org/packages/slim/csrf);
 * [illuminate/validation](https://packagist.org/packages/illuminate/validation).
 
-Для установки приложения нужно клонировать его в рабочую папку:
+Для установки приложения нужно его скачать в рабочую папку:
 
 ```
-git clone git@github.com:falbarRu/slim-skeleton.git ./
+composer require falbar/slim-skeleton
 ```
 
 Запустить композер:
