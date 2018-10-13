@@ -9,16 +9,10 @@
 * [slim/csrf](https://packagist.org/packages/slim/csrf);
 * [illuminate/validation](https://packagist.org/packages/illuminate/validation).
 
-Для установки приложения нужно его скачать в рабочую папку:
+Для установки приложения нужно его развернуть в рабочей папке:
 
 ```
-composer require falbar/slim-skeleton
-```
-
-Запустить композер:
-
-```
-composer install
+composer create-project falbar/slim-skeleton ./
 ```
 
 Создать файл настроек среды по образцу `.env.example`, для локальной среды `.env.local`, a для боевой `.env.production`.

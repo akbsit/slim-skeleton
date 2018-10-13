@@ -11,13 +11,6 @@
     "homepage": "http://falbar.ru/",
     "license": "MIT",
     "type": "project",
-    "repositories": [
-        {
-            "type": "github",
-            "url": "git@github.com:falbarRu/slim-skeleton.git",
-            "branch": "master"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "App\\": "app",
