@@ -2,15 +2,15 @@
 /**
  * Appointment: Базовый валидатор
  * File: Validator.php
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Anton Kuleshov
  **/
 
 namespace App\Validation;
 
-use Illuminate\Translation\ArrayLoader;
-use Illuminate\Translation\Translator;
-use Illuminate\Validation\Factory;
+use \Illuminate\Translation\ArrayLoader;
+use \Illuminate\Translation\Translator;
+use \Illuminate\Validation\Factory;
 
 /**
  * Class Validator
