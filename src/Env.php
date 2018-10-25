@@ -3,7 +3,7 @@
  * Appointment: Среда выполнения
  * Description: Предназначен для определения среды выполнения скрипта (local, production) и получения настроек $arRequiredParams из файлов .env расположенных в $arPath
  * File: Env.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
@@ -128,12 +128,10 @@ class Env
                     $sName = trim($arFileDataItem[0]);
                     $sValue = trim($arFileDataItem[1]);
 
-                    if ($sName === 'DEBUG') {
-                        if ($sValue === 'true') {
-                            $arTmp[$sName] = true;
-                        } else {
-                            $arTmp[$sName] = false;
-                        }
+                    if ($sValue === 'true') {
+                        $arTmp[$sName] = true;
+                    } else if ($sValue === 'false') {
+                        $arTmp[$sName] = false;
                     } else {
                         $arTmp[$sName] = $sValue;
                     }

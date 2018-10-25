@@ -12,7 +12,7 @@
 Для установки приложения нужно его развернуть в рабочей папке:
 
 ```
-composer create-project falbar/slim-skeleton ./
+composer create-project falbar/slim-skeleton ./ "1.*"
 ```
 
 Создать файл настроек среды по образцу `.env.example`, для локальной среды `.env.local`, a для боевой `.env.production`.
