@@ -2,12 +2,12 @@
 /**
  * Appointment: Сборка приложения
  * File: app.php
- * Version: 0.0.7
+ * Version: 0.0.8
  * Author: Anton Kuleshov
  **/
 
-use \Skeleton\Env;
-use \Skeleton\Folder;
+use \Falbar\Skeleton\Env;
+use \Falbar\Skeleton\Folder;
 
 session_start();
 

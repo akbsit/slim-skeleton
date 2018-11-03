@@ -3,11 +3,11 @@
  * Appointment: Папки
  * Description: Предназначен для работы с папками
  * File: Folder.php
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Anton Kuleshov
  **/
 
-namespace Skeleton;
+namespace Falbar\Skeleton;
 
 /**
  * Class Folder

@@ -3,11 +3,11 @@
  * Appointment: Среда выполнения
  * Description: Предназначен для определения среды выполнения скрипта (local, production) и получения настроек $arRequiredParams из файлов .env расположенных в $arPath
  * File: Env.php
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Anton Kuleshov
  **/
 
-namespace Skeleton;
+namespace Falbar\Skeleton;
 
 /**
  * Class Env
