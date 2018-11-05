@@ -3,7 +3,7 @@
  * Appointment: Папки
  * Description: Предназначен для работы с папками
  * File: Folder.php
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Anton Kuleshov
  **/
 
@@ -11,7 +11,7 @@ namespace Falbar\Skeleton;
 
 /**
  * Class Folder
- * @package Skeleton
+ * @package Falbar\Skeleton
  */
 class Folder
 {
