@@ -1,4 +1,4 @@
-# slim-skeleton
+# slim-skeleton, [Packagist](https://packagist.org/packages/falbar/slim-skeleton)
 
 Каркас PHP приложения на основе Slim Framework.
 
@@ -42,7 +42,7 @@ composer create-project falbar/slim-skeleton ./ "1.*"
 custom_config.php
 ```
 
-```
+```php
 return [
     'CONFIG_NAME_1' => 'CONFIG_VALUE_1',
     'CONFIG_NAME_2' => 'CONFIG_VALUE_2',
@@ -53,6 +53,6 @@ return [
 
 После чего настройки будут доступны в приложение. Имя файла является ключом в массиве `config`. Пример использования в контроллере:
 
-```
+```php
 $this->config->CUSTOM_CONFIG['CONFIG_NAME_1']
 ```
