@@ -1,12 +1,4 @@
-<?php
-/**
- * Appointment: Посредник csrf
- * File: CsrfGuardMiddleware.php
- * Version: 0.0.3
- * Author: Anton Kuleshov
- **/
-
-namespace App\Middleware;
+<?php namespace App\Middleware;
 
 /**
  * Class CsrfGuardMiddleware
@@ -18,6 +10,7 @@ class CsrfGuardMiddleware extends Middleware
      * @param $oRequest
      * @param $oResponse
      * @param $oNext
+     *
      * @return mixed
      */
     public function __invoke($oRequest, $oResponse, $oNext)
@@ -26,7 +19,7 @@ class CsrfGuardMiddleware extends Middleware
             'field' => '
                 <input type="hidden" name="' . $this->csrf->getTokenNameKey() . '" value="' . $this->csrf->getTokenName() . '">
                 <input type="hidden" name="' . $this->csrf->getTokenValueKey() . '" value="' . $this->csrf->getTokenValue() . '">
-            '
+            ',
         ]);
 
         return $oNext($oRequest, $oResponse);

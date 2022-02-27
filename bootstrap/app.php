@@ -1,13 +1,7 @@
 <?php
-/**
- * Appointment: Сборка приложения
- * File: app.php
- * Version: 0.0.8
- * Author: Anton Kuleshov
- **/
 
-use \Falbar\Skeleton\Env;
 use \Falbar\Skeleton\Folder;
+use \Falbar\Skeleton\Env;
 
 session_start();
 
@@ -46,8 +40,8 @@ error_reporting($oConfigApp->APP['DEBUG'] ? E_ALL : 0);
 
 $oApp = new \Slim\App([
     'settings' => [
-        'displayErrorDetails' => $oConfigApp->APP['DEBUG']
-    ]
+        'displayErrorDetails' => $oConfigApp->APP['DEBUG'],
+    ],
 ]);
 
 $oContainer = $oApp->getContainer();

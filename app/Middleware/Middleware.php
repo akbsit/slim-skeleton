@@ -1,12 +1,4 @@
-<?php
-/**
- * Appointment: Базовый посредник
- * File: Middleware.php
- * Version: 0.0.2
- * Author: Anton Kuleshov
- **/
-
-namespace App\Middleware;
+<?php namespace App\Middleware;
 
 /**
  * Class Middleware
@@ -14,13 +6,12 @@ namespace App\Middleware;
  */
 class Middleware
 {
-    /**
-     * @var
-     */
+    /* @var object */
     protected $oContainer;
 
     /**
-     * Middleware constructor.
+     * Middleware constructor
+     *
      * @param $oContainer
      */
     public function __construct($oContainer)
@@ -30,6 +21,7 @@ class Middleware
 
     /**
      * @param $sProperty
+     *
      * @return mixed
      */
     public function __get($sProperty)

@@ -1,13 +1,4 @@
-<?php
-/**
- * Appointment: Папки
- * Description: Предназначен для работы с папками
- * File: Folder.php
- * Version: 0.0.3
- * Author: Anton Kuleshov
- **/
-
-namespace Falbar\Skeleton;
+<?php namespace Falbar\Skeleton;
 
 /**
  * Class Folder
@@ -16,10 +7,10 @@ namespace Falbar\Skeleton;
 class Folder
 {
     /**
-     * Получение содержимого папки
      * @param string $sPath
      * @param string $sType
-     * @param array $arExceptions
+     * @param array  $arExceptions
+     *
      * @return array
      */
     public static function scan($sPath = '.', $sType = '*', $arExceptions = [])

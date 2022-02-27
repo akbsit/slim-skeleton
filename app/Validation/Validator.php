@@ -1,12 +1,4 @@
-<?php
-/**
- * Appointment: Базовый валидатор
- * File: Validator.php
- * Version: 0.0.4
- * Author: Anton Kuleshov
- **/
-
-namespace App\Validation;
+<?php namespace App\Validation;
 
 use \Illuminate\Translation\ArrayLoader;
 use \Illuminate\Translation\Translator;
@@ -18,23 +10,18 @@ use \Illuminate\Validation\Factory;
  */
 class Validator
 {
-    /**
-     * @var
-     */
+    /* @var object */
     protected $oContainer;
 
-    /**
-     * @var Factory
-     */
+    /* @var Factory */
     protected $oFactory;
 
-    /**
-     * @var array
-     */
+    /* @var array */
     public $arError = [];
 
     /**
-     * Validator constructor.
+     * Validator constructor
+     *
      * @param $oContainer
      */
     public function __construct($oContainer)
@@ -53,6 +40,7 @@ class Validator
      * @param array $arData
      * @param array $arRules
      * @param array $arMessages
+     *
      * @return $this
      */
     public function validate($arData = [], $arRules = [], $arMessages = [])
@@ -72,6 +60,7 @@ class Validator
 
     /**
      * @param $sProperty
+     *
      * @return mixed
      */
     public function __get($sProperty)

@@ -1,12 +1,4 @@
-<?php
-/**
- * Appointment: Базовый контроллер
- * File: Controller.php
- * Version: 0.0.2
- * Author: Anton Kuleshov
- **/
-
-namespace App\Controller;
+<?php namespace App\Controller;
 
 /**
  * Class Controller
@@ -14,13 +6,12 @@ namespace App\Controller;
  */
 class Controller
 {
-    /**
-     * @var
-     */
+    /* @var object */
     protected $oContainer;
 
     /**
-     * Controller constructor.
+     * Controller constructor
+     *
      * @param $oContainer
      */
     public function __construct($oContainer)
@@ -30,6 +21,7 @@ class Controller
 
     /**
      * @param $sProperty
+     *
      * @return mixed
      */
     public function __get($sProperty)
