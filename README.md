@@ -1,42 +1,42 @@
-# slim-skeleton, [Packagist](https://packagist.org/packages/falbar/slim-skeleton)
+# slim-skeleton, [Packagist](https://packagist.org/packages/akbsit/slim-skeleton)
 
-Каркас PHP приложения на основе Slim Framework.
+Framework PHP application based on Slim Framework.
 
-В каркас входят пакеты:
+Includes packages:
 
 * [slim/slim](https://packagist.org/packages/slim/slim);
 * [slim/twig-view](https://packagist.org/packages/slim/twig-view);
 * [slim/csrf](https://packagist.org/packages/slim/csrf);
 * [illuminate/validation](https://packagist.org/packages/illuminate/validation).
 
-Для установки приложения нужно его развернуть в рабочей папке:
+To install the application, you need to deploy it in your working folder:
 
 ```
-composer create-project falbar/slim-skeleton ./ "1.*"
+composer create-project akbsit/slim-skeleton ./ "1.*"
 ```
 
-Создать файл настроек среды по образцу `.env.example`, для локальной среды `.env.local`, a для боевой `.env.production`.
+Create an environment settings file based on the example `.env.example`, for local environment `.env.local`, for production `.env.production`.
 
-Локальная среда определяется по поддоменам: `.loc` и `.local`.
+The local environment is defined by subdomains: `.loc` и `.local`.
 
-## Добавление настроек
+## Adding settings
 
-В приложение используются два вида настроек:
+Application uses two types of settings:
 
-* Обязательные (без их определения в `.env.local` и `.env.production` не запуститься приложение);
-* Не обязательные.
+* Required (without their definition in `.env.local` and `.env.production` the application will not start);
+* Optional.
 
-> Все названия настроек приводятся к верхнему регистру.
+> All settings names are converted to upper case.
 
-### Добавление обязательных настроек
+### Adding required settings
 
-Обязательный набор настроек можно дополнить в файле определения среды `src/Env.php` - параметр `$arRequiredParams` (важно не удалять установленные по умолчанию настройки так как они используется в приложение). После чего все добавленные настройки нужно будет определить в конфигурационном файле `configs/app.php` по аналогии.
+The required set of settings can be supplemented in the environment definition file `src/Env.php` - the `$arRequiredParams` parameter (it is important not to delete the default settings as they are used in the application). After that, all added settings will need to be defined in the configuration file `configs/app.php` by analogy.
 
-> Не рекомендуется использовать данных способ!
+> It is not recommended to use this method!
 
-### Добавление не обязательных настроек
+### Adding optional settings
 
-Для добавления своего набора, потребуется создать файл с произвольным названием в папке `configs` и с содержимым:
+To add your own set, you will need to create a file with an arbitrary name in the `configs` folder and with the contents:
 
 ```
 custom_config.php
@@ -51,7 +51,7 @@ return [
 ];
 ```
 
-После чего настройки будут доступны в приложение. Имя файла является ключом в массиве `config`. Пример использования в контроллере:
+After which the settings will be available in the application. The file name is a key in the `config` array. Example of use in a controller:
 
 ```php
 $this->config->CUSTOM_CONFIG['CONFIG_NAME_1']

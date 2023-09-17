@@ -1,5 +1,5 @@
 {
-    "name": "falbar/slim-skeleton",
+    "name": "akbsit/slim-skeleton",
     "description": "The framework of a PHP application based on the Slim Framework.",
     "keywords": [
         "slim",
@@ -8,13 +8,12 @@
         "skeleton",
         "application template"
     ],
-    "homepage": "http://falbar.ru/",
     "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {
             "App\\": "app",
-            "Falbar\\Skeleton\\": "src"
+            "Akbsit\\Skeleton\\": "src"
         }
     },
     "require": {

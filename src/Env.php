@@ -1,8 +1,8 @@
-<?php namespace Falbar\Skeleton;
+<?php namespace Akbsit\Skeleton;
 
 /**
  * Class Env
- * @package Falbar\Skeleton
+ * @package Akbsit\Skeleton
  */
 class Env
 {

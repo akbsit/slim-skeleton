@@ -1,7 +1,7 @@
 <?php
 
-use \Falbar\Skeleton\Folder;
-use \Falbar\Skeleton\Env;
+use \Akbsit\Skeleton\Folder;
+use \Akbsit\Skeleton\Env;
 
 session_start();
 
